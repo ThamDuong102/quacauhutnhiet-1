@@ -4,7 +4,8 @@ const navbar = document.getElementById("navbar");
 const revealItems = document.querySelectorAll(".reveal");
 const form = document.getElementById("contactForm");
 const formNote = document.getElementById("formNote");
-const zaloPhone = "0988469739";
+const zaloPhone = "0910315733";
+const zaloPhoneDisplay = "0910 315 733";
 
 menuToggle?.addEventListener("click", () => {
   navLinks?.classList.toggle("open");
@@ -54,7 +55,7 @@ form?.addEventListener("submit", (event) => {
   ];
 
   const zaloText = requestLines.join("\n");
-  const zaloUrl = `https://zalo.me/${zaloPhone}?text=${encodeURIComponent(zaloText)}`;
+  const zaloChatUrl = `https://chat.zalo.me/?phone=${zaloPhone}`;
 
   if (navigator.clipboard?.writeText) {
     navigator.clipboard.writeText(zaloText).catch(() => {
@@ -62,8 +63,8 @@ form?.addEventListener("submit", (event) => {
     });
   }
 
-  window.open(zaloUrl, "_blank", "noopener,noreferrer");
+  window.open(zaloChatUrl, "_blank", "noopener,noreferrer");
 
-  formNote.textContent = `Cảm ơn ${name}! Chúng tôi đang mở Zalo tới số ${zaloPhone}. Nội dung đã được sao chép để bạn dán nhanh nếu cần.`;
+  formNote.textContent = `Cảm ơn ${name}! Chúng tôi đang mở khung nhắn tin Zalo tới số ${zaloPhoneDisplay}. Nội dung đã được sao chép để bạn dán nhanh.`;
   form.reset();
 });
