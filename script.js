@@ -4,8 +4,8 @@ const navbar = document.getElementById("navbar");
 const revealItems = document.querySelectorAll(".reveal");
 const form = document.getElementById("contactForm");
 const formNote = document.getElementById("formNote");
-const zaloPhone = "0910315733";
-const zaloPhoneDisplay = "0910 315 733";
+const zaloPhone = "0919315733";
+const zaloPhoneDisplay = "0919315733";
 
 menuToggle?.addEventListener("click", () => {
   navLinks?.classList.toggle("open");
